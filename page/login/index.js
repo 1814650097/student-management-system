@@ -22,7 +22,7 @@ document.querySelector('.btn').addEventListener('click',()=>{
         data
     }).then(result=>{
         myAlert(true,'登陆成功')
-        localStorage.setItem('token',result.data.data.token)
+        localStorage.setItem('token',result.data.token)
         setTimeout(()=>{
             location.href='../content/index.html'
         },1500)
