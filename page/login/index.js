@@ -8,6 +8,10 @@
 document.querySelector('.btn').addEventListener('click',()=>{
     const form = document.querySelector('.login-form')
     const data= serialize(form,{hash:true,empty:true})
+    if(data.mobile.length!==11){
+        myAlert(false,"手机号长度要11位")
+        return
+    }
     axios({
         url:'/v1_0/authorizations',
         method:'POST',
