@@ -9,7 +9,11 @@ document.querySelector('.btn').addEventListener('click',()=>{
     const form = document.querySelector('.login-form')
     const data= serialize(form,{hash:true,empty:true})
     if(data.mobile.length!==11){
-        myAlert(false,"手机号长度要11位")
+        myAlert(false,"手机号长度应为11位")
+        return
+    }
+    if(data.code.length!=6){
+        myAlert(false,"验证码长度应为6位")
         return
     }
     axios({
