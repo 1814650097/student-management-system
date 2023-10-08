@@ -24,4 +24,8 @@ axios({
  *  3.1 绑定点击事件
  *  3.2 清空本地缓存，跳转到登录页面
  */
-
+document.querySelector('.quit').addEventListener('click',e=>{
+  // 清空缓存
+  localStorage.clear()
+  location.href='../login/index.html'
+})
