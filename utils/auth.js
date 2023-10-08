@@ -16,6 +16,7 @@ if(!token) {
 axios({
   url: '/v1_0/user/profile',
 }).then(result=>{
+
     const username=result.data.data.name
     document.querySelector('.nick-name').innerHTML=username
 })
